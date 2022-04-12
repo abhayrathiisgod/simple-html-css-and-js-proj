@@ -14,6 +14,25 @@ const words = [
   "tense",
   "airplane",
   "ball",
+  "I am",
+  "Batman",
+  "God",
+  "Afghanistan",
+  "Random",
+  "Abhay",
+  "Abhay",
+  "Rathi",
+  "Rathi",
+  "Ironman",
+  "Gay",
+  "NewLink",
+  "C.V Raman",
+  "Silver",
+  "Netflix",
+  "rererereeer",
+  "oscar",
+  "Abhay is god",
+  "Abhay is batman",
   "pies",
   "juice",
   "warlike",
@@ -77,13 +96,17 @@ function gameOver() {
 
 text.addEventListener("input", (e) => {
   const insertedText = e.target.value;
+  
   if (insertedText === randomWord) {
     e.target.value = "";
     addWordToDom();
     updateScore();
-    if (difficulty === "hard") time += 2;
-    else if (difficulty === "medium") time += 3;
-    else time += 5;
+    if (difficulty === "hard") 
+        time += 2;
+    else if (difficulty === "medium") 
+        time += 5;
+    else 
+        time += 10;
     updateTime();
   }
 });
